@@ -27,11 +27,14 @@ e equipamentos para computadores.
 - Computadores
 - Acessórios gamers
 
-## Tecnologias
 
-- HTML
-- CSS
+## Tecnologias utilizadas
+
+- HTML5
+- CSS3
 - JavaScript
+- Fetch API
+- LocalStorage
 - Git
 - GitHub
 
@@ -39,6 +42,3 @@ e equipamentos para computadores.
 
 A documentação completa está disponível na pasta docs.
 
-## Autores
-
-Adicionar nomes dos integrantes do projeto.

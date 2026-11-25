@@ -18,3 +18,21 @@ selecionados.
 
 ## Contato
 Informações para contato com a loja.
+
+
+## Consulta de produtos por API
+
+A página de produtos deverá consultar uma API externa
+utilizando JavaScript e Fetch API.
+
+Os dados recebidos deverão ser apresentados
+em cards contendo:
+
+- Imagem do produto.
+- Nome.
+- Descrição.
+- Preço.
+- Botão adicionar ao carrinho.
+
+O sistema deverá tratar erros de conexão
+e ausência de resultados.
