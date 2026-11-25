@@ -1,0 +1,182 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0b0f;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    background-color: #111116;
+    border-bottom: 1px solid #8a2be2;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #a855f7;
+}
+
+.cart {
+    background-color: #7e22ce;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cart:hover {
+    background-color: #a855f7;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* CONTEÚDO */
+
+.hero {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 38px;
+}
+
+.hero h1 span {
+    color: #a855f7;
+}
+
+.hero p {
+    color: #bbbbbb;
+    font-size: 18px;
+}
+
+.placeholder {
+    min-height: 180px;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid #292033;
+}
+
+.placeholder h2 {
+    color: #a855f7;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #111116;
+    border-top: 1px solid #8a2be2;
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .cart {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
