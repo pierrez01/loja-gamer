@@ -139,17 +139,27 @@
 
     <!-- ÉPICO 05: FILTRO POR CATEGORIAS -->
     <div class="category-filter" id="category-filter" role="group" aria-label="Filtrar por categoria">
-        <button type="button" class="category-btn active" data-category="laptops">Notebooks</button>
+        <button type="button" class="category-btn active" data-category="todos">Todos</button>
+        <button type="button" class="category-btn" data-category="laptops">Notebooks</button>
         <button type="button" class="category-btn" data-category="smartphones">Smartphones</button>
         <button type="button" class="category-btn" data-category="tablets">Tablets</button>
-        <button type="button" class="category-btn" data-category="mobile-accessories">Acessórios</button>
-        <button type="button" class="category-btn" data-category="todos">Todos</button>
+        <button type="button" class="category-btn" data-category="teclados">Teclados</button>
+        <button type="button" class="category-btn" data-category="mouses">Mouses</button>
+        <button type="button" class="category-btn" data-category="headsets">Headsets</button>
+        <button type="button" class="category-btn" data-category="monitores">Monitores</button>
+        <button type="button" class="category-btn" data-category="placas-de-video">Placas de vídeo</button>
+        <button type="button" class="category-btn" data-category="computadores">Computadores</button>
+        <button type="button" class="category-btn" data-category="acessorios">Acessórios</button>
     </div>
 
     <p class="search-status" id="search-status" aria-live="polite"></p>
 
     <div id="products-container" class="products-grid">
         <p class="loading">Carregando produtos...</p>
+    </div>
+
+    <div class="load-more-wrap">
+        <button type="button" class="load-more-btn" id="load-more" hidden>Carregar mais produtos</button>
     </div>
 
 </section>
@@ -173,6 +183,7 @@
         </div>
     </footer>
 
+    <script src="js/produtos.js"></script>
     <script src="js/script.js"></script>
 
 </body>

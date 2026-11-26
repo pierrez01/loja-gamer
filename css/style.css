@@ -747,3 +747,35 @@ body {
         animation: none;
     }
 }
+
+
+/* ============================================
+   CATÁLOGO COM ~150 PRODUTOS
+   ============================================ */
+
+.load-more-wrap {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.load-more-btn {
+    padding: 13px 34px;
+    background: linear-gradient(135deg, #7e22ce, #a855f7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.load-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.8);
+}
+
+.load-more-btn[hidden] {
+    display: none;
+}
