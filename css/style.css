@@ -364,3 +364,386 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   ÉPICO 04 - IMPACTO VISUAL, CARROSSEL E BUSCA
+   ============================================ */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+/* Header com destaque */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 25px rgba(138, 43, 226, 0.25);
+}
+
+.cart {
+    transition: 0.3s;
+}
+
+.cart:hover {
+    background-color: #a855f7;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+/* Hero */
+.hero {
+    background:
+        radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.28), transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(126, 34, 206, 0.28), transparent 45%),
+        #0b0b0f;
+}
+
+.hero h1 {
+    text-shadow: 0 0 25px rgba(168, 85, 247, 0.5);
+}
+
+.hero h1 span {
+    text-shadow: 0 0 18px rgba(168, 85, 247, 0.9);
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #7e22ce, #a855f7);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px rgba(168, 85, 247, 0.9);
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px auto 40px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid #8a2be2;
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.3);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    padding: 40px 60px;
+}
+
+.slide-1 { background: linear-gradient(120deg, #2e1065, #7e22ce 60%, #a855f7); }
+.slide-2 { background: linear-gradient(120deg, #0f172a, #4c1d95 60%, #9333ea); }
+.slide-3 { background: linear-gradient(120deg, #1e1b4b, #6b21a8 60%, #c026d3); }
+
+.slide-content {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.carousel-slide .slide-content > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+}
+
+.carousel-slide.active .slide-content > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel-slide.active .slide-content > *:nth-child(2) { transition-delay: 0.15s; }
+.carousel-slide.active .slide-content > *:nth-child(3) { transition-delay: 0.3s; }
+.carousel-slide.active .slide-content > *:nth-child(4) { transition-delay: 0.45s; }
+
+.slide-tag {
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.carousel-slide h2 {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.carousel-slide p {
+    color: #e9d5ff;
+    font-size: 17px;
+}
+
+.slide-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: white;
+    color: #6b21a8;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.slide-btn:hover {
+    transform: scale(1.06);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: #7e22ce;
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+.carousel-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carousel-dot {
+    width: 11px;
+    height: 11px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-dot.active {
+    background-color: white;
+    width: 28px;
+    border-radius: 10px;
+}
+
+/* Busca */
+.search-form {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 16px;
+    background-color: #17141e;
+    color: white;
+    border: 1px solid #30223f;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-form input:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+}
+
+.search-form button {
+    padding: 13px 22px;
+    background-color: #7e22ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #a855f7;
+}
+
+.search-status {
+    text-align: center;
+    color: #aaaaaa;
+    margin-bottom: 25px;
+    min-height: 20px;
+}
+
+/* Cards de produto mais vistosos */
+.product-card {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+    animation: cardEntrada 0.5s ease both;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 22px rgba(168, 85, 247, 0.45);
+}
+
+@keyframes cardEntrada {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   ÉPICO 05 - BENEFÍCIOS E FILTRO DE CATEGORIAS
+   ============================================ */
+
+.benefits {
+    background-color: #111116;
+    border-top: 1px solid #292033;
+    border-bottom: 1px solid #292033;
+    padding: 30px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.benefit-icon {
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1526;
+    border: 1px solid #8a2be2;
+    border-radius: 50%;
+}
+
+.benefit h3 {
+    font-size: 16px;
+    color: #c084fc;
+    margin-bottom: 3px;
+}
+
+.benefit p {
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    padding: 9px 20px;
+    background-color: #17141e;
+    color: white;
+    border: 1px solid #30223f;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.category-btn:hover {
+    border-color: #a855f7;
+    color: #c084fc;
+}
+
+.category-btn.active {
+    background-color: #7e22ce;
+    border-color: #a855f7;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+}
+
+/* Responsivo dos novos blocos */
+@media (max-width: 900px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-slide {
+        padding: 30px 25px 50px;
+        min-height: 300px;
+    }
+
+    .carousel-slide h2 {
+        font-size: 23px;
+    }
+
+    .carousel-slide p {
+        font-size: 15px;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-track,
+    .carousel-slide .slide-content > *,
+    .product-card {
+        transition: none;
+        animation: none;
+    }
+}

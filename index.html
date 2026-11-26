@@ -42,6 +42,85 @@
         <section id="inicio" class="hero">
             <h1>Bem-vindo à <span>GameZone</span></h1>
             <p>Seu universo gamer começa aqui.</p>
+            <a href="#produtos" class="hero-btn">Ver produtos</a>
+        </section>
+
+        <!-- ÉPICO 04: CARROSSEL ANIMADO -->
+        <section class="carousel" id="carousel" aria-label="Destaques da loja" aria-roledescription="carrossel">
+            <div class="carousel-track" id="carousel-track">
+
+                <article class="carousel-slide slide-1">
+                    <div class="slide-content">
+                        <span class="slide-tag">Lançamento</span>
+                        <h2>Notebooks gamer de alta performance</h2>
+                        <p>Potência para rodar seus jogos favoritos em qualquer lugar.</p>
+                        <a href="#produtos" class="slide-btn">Confira agora</a>
+                    </div>
+                </article>
+
+                <article class="carousel-slide slide-2">
+                    <div class="slide-content">
+                        <span class="slide-tag">Ofertas</span>
+                        <h2>Periféricos para subir de nível</h2>
+                        <p>Teclados, mouses e headsets para dominar a partida.</p>
+                        <a href="#produtos" class="slide-btn">Ver ofertas</a>
+                    </div>
+                </article>
+
+                <article class="carousel-slide slide-3">
+                    <div class="slide-content">
+                        <span class="slide-tag">Novidades</span>
+                        <h2>Monte o setup dos seus sonhos</h2>
+                        <p>Tudo o que você precisa em um só lugar.</p>
+                        <a href="#produtos" class="slide-btn">Explorar</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <button class="carousel-btn prev" id="carousel-prev" aria-label="Slide anterior">‹</button>
+            <button class="carousel-btn next" id="carousel-next" aria-label="Próximo slide">›</button>
+
+            <div class="carousel-dots" id="carousel-dots"></div>
+        </section>
+
+        <!-- ÉPICO 05: FAIXA DE BENEFÍCIOS -->
+        <section class="benefits" aria-label="Benefícios da loja">
+            <div class="container benefits-grid">
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">🚚</span>
+                    <div>
+                        <h3>Entrega rápida</h3>
+                        <p>Receba seu pedido com agilidade</p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">🔒</span>
+                    <div>
+                        <h3>Compra segura</h3>
+                        <p>Seus dados sempre protegidos</p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">🛡️</span>
+                    <div>
+                        <h3>Garantia</h3>
+                        <p>Produtos com garantia de qualidade</p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span class="benefit-icon" aria-hidden="true">🎧</span>
+                    <div>
+                        <h3>Suporte gamer</h3>
+                        <p>Atendimento por quem entende de jogos</p>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <section id="produtos" class="products-section">
@@ -50,6 +129,24 @@
         <h2>Produtos <span>em destaque</span></h2>
         <p>Confira nossos equipamentos e novidades.</p>
     </div>
+
+    <!-- ÉPICO 04: BUSCA -->
+    <form class="search-form" id="search-form" role="search">
+        <label for="search-input" class="sr-only">Buscar produtos</label>
+        <input type="search" id="search-input" placeholder="Buscar produtos..." autocomplete="off">
+        <button type="submit">🔍 Buscar</button>
+    </form>
+
+    <!-- ÉPICO 05: FILTRO POR CATEGORIAS -->
+    <div class="category-filter" id="category-filter" role="group" aria-label="Filtrar por categoria">
+        <button type="button" class="category-btn active" data-category="laptops">Notebooks</button>
+        <button type="button" class="category-btn" data-category="smartphones">Smartphones</button>
+        <button type="button" class="category-btn" data-category="tablets">Tablets</button>
+        <button type="button" class="category-btn" data-category="mobile-accessories">Acessórios</button>
+        <button type="button" class="category-btn" data-category="todos">Todos</button>
+    </div>
+
+    <p class="search-status" id="search-status" aria-live="polite"></p>
 
     <div id="products-container" class="products-grid">
         <p class="loading">Carregando produtos...</p>
